@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Admin Dashboard</h2>
+
+        <button id="addUser">Add New User</button>
+
+        <!-- Add User Modal -->
+        <div id="addUserModal" class="dialog">
+            <div class="dialog-content">
+            <h3>Add New User</h3>
+            <input type="text" id="newUserName" placeholder="Name">
+            <input type="email" id="newUserEmail" placeholder="Email">
+            <input type="text" id="newUserPhone" placeholder="Phone (optional)">
+            <input type="password" id="newUserPassword" placeholder="Password">
+            <button id="submitNewUser">Create User</button>
+            <button id="closeAddUserModal">Cancel</button>
+            </div>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Next Booking</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="userTable">
+                <!-- Users will be loaded here dynamically -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="admin.js"></script> 
+</body>
+</html>
